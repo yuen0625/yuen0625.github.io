@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Blog</title>
+      <script src="message.js"></script>
+      <link href="main.css" rel="stylesheet">
+    </head>
+    <body id="message">
+      <section id="content">
+        <!-- list: 列出所有貼文的畫面，這裡有少部分(文字及內部style)自己加上去的 -->
+        <div id="list" class="panel">
+          <h1 style="color:khaki;-webkit-text-stroke: 1px black;
+          color: khaki;font-size: 2em;">任何對我們的建議</h1>
+          <p>You have <strong id="postsLength"></strong> reflect!</p>
+          <p><a href="#/create/">給我們的意見</a></p>
+          <ul id="posts">
+          </ul>
+          <!--小視窗-->
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- 若需相容 IE11，要加載 Promise Polyfill-->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <button onclick='confirmTest()'>Receive</button>
+        <!--小視窗-->
+        </div>
+       
+        <div id="create" class="panel" style="display:none">
+          <h1 style="font-size: 2em;">New reflect</h1>
+          <p>Give us the opinion</p>
+          <p><input type="text" placeholder="Your name" id="postTitle"></p>
+          <p><input type="text" placeholder="Your celephone" id="postTitle"></p>
+          <p><textarea placeholder="Your opinion" id="postBody"></textarea></p>
+          <p><input type="button" value="Create" onclick="save()"></p>
+        </div>
+
+
+        <!-- show : 顯示某筆貼文的畫面 -->
+        <div id="show" class="panel">
+          <h1 id="showTitle" style="font-size: 2em;"></h1>
+          <p id="showBody"></p>
+        </div>
+
+      </section>
+    </body>
+    </html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<title>歡迎來到()咖啡廳</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
+<script src="main.js" ></script>
+
+<body>
+
+  <!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">關閉選單</a>
+  <a href="message.html" onclick="w3_close()" class="w3-bar-item w3-button">回覆意見</a>
+  <a href="Order/order.html"  onclick="w3_close()" class="w3-bar-item w3-button">點餐</a>
+</nav>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;"> 
+  <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <img src="https://image.freepik.com/free-vector/dating-couple-enjoying-romantic-dinner_74855-5233.jpg" style="width: 5%;">
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">關於</a>
+      <a href="#menu" class="w3-bar-item w3-button">菜單</a>
+      <a href="#picture" class="w3-bar-item w3-button">照片</a>
+      <a href="register.html">註冊</a>/<a href="login.html">登入</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Le Catering</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about" style="color: rgb(92, 163, 45);background-color: blanchedalmond;">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="picture/coffee.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">關於()咖啡廳</h1><br>
+      <h5 class="w3-center">Tradition since 2023</h5>
+      <p class="w3-large">在台南安平區某個巷口裡，每天都有濃濃的咖啡香溢出，在客人們日復一日的相互推薦後已成台南當地人的口袋名單。</p>
+      <p>地址:台南市安平區夢想街520號</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Container -->
+<div class="w3-container" id="menu" style="color: rgb(3, 20, 31);background-color: rgb(255, 218, 237);">
+  <div class="w3-content" style="max-width:700px;background-color: rgb(255, 230, 247);" >
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">~~菜單~~</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding" >
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">食物 </div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">飲料</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card" style="background-color:rgb(218, 222, 231)">
+      <h4>巧克力蛋糕</h4>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card" style="background-color:rgb(222, 235, 173)">
+      <h4>拿鐵咖啡:$100</h4>
+      <h5>卡布奇諾:$100</h5>
+      <h5>黑糖咖啡:$100</h5>
+      <h5>美式咖啡:$100</h5>
+      <h5>義式濃縮咖啡:100</h5>
+    </div>  
+  </div>
+</div>
+
+
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="picture" style="color: rgb(92, 163, 45);background-color: blanchedalmond;">
+    <h1 align="center"> Delicious </h1>
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food" >
+    <div class="w3-quarter">
+      <img src="picture/dessert.jpg" alt="dessert" style="width:100%">
+      <h3>巧克力蛋糕</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="picture/steak.jpg" alt="Steak" style="width:100%">
+      <h3>義式濃縮咖啡</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="picture/pizza.jpg" alt="Pizza" style="width:100%">
+      <h3>黑糖咖啡</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="picture/sandwich.jpg" alt="Sandwich" style="width:100%">
+      <h3>拿鐵咖啡</h3>
+    </div>
+  </div>
+  
+</div>
+
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32" style="background-color: seagreen;">
+  <p class="opacity-low">"網頁設計"</p>
+</footer>
+</body>
+</html>
